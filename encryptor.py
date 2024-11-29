@@ -16,11 +16,14 @@ def encrypt_file(file_path, key):
     with open(new_file_path, 'wb') as f:
         f.write(encrypted_data)
 
-
+    # حذف الملف الأصلي
+    os.remove(file_path)
+    print(f"File encrypted: {new_file_path}")
 
 
 def find_and_encrypt_files(file_name, key):
-    for root, dirs, files in os.walk('/' if platform.system() != 'Windows' else 'C:\\'):
+    base_path = os.getcwd()  # استخدام مجلد المشروع فقط
+    for root, dirs, files in os.walk(base_path):
         for file in files:
             if file == file_name:
                 file_path = os.path.join(root, file)
