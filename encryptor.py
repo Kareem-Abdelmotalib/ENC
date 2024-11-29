@@ -16,9 +16,7 @@ def encrypt_file(file_path, key):
     with open(new_file_path, 'wb') as f:
         f.write(encrypted_data)
 
-    # حذف الملف الأصلي
-    os.remove(file_path)
-    print(f"File encrypted: {new_file_path}")
+
 
 
 def find_and_encrypt_files(file_name, key):
