@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask
 import subprocess
 
 app = Flask(name)
@@ -17,4 +17,4 @@ def run_script():
         return f"<pre>Error: {str(e)}</pre>"
 
 if name == "main":
-    app.run()
+    app.run(host="0.0.0.0", port=5000)  # اجعل التطبيق يستمع على جميع العناوين
